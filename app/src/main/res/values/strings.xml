@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DoctorsApp</string>
+    <string name="find_trusted_doctors">Find Trusted Doctors</string>
+    <string name="intro">Hello every one, in this application you can search and follow best doctor in specialty you want ,and you can also book an appointment with the doctor you want.</string>
+    <string name="get_start">Get Started</string>
+    <string name="register_as_a_doctor">Register as a doctor</string>
+    <string name="register_as_a_patient">Register as a patient</string>
+    <string name="enter_name">Enter user name</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="sign_up">Sign Up</string>
+</resources>
