@@ -14,10 +14,16 @@
         android:theme="@style/Theme.DoctorsApp"
         tools:targetApi="31">
         <activity
+            android:name=".activities.DoctorDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Dialog"
+            android:exported="false" />
+        <activity
             android:name=".activities.AppointmentPart2Activity"
             android:exported="false" />
         <activity
-            android:name=".activities.FaceActivity"
+            android:name=".activities.AppointmentActivity"
             android:exported="false" />
         <activity
             android:name=".activities.FindDoctorsActivity"
@@ -38,7 +44,7 @@
             android:name=".activities.RegisterAsActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.AppointmentActivity"
+            android:name=".activities.FaceActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -125,7 +125,7 @@
             <ImageView
                 android:id="@+id/share_icon"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/_25sdp"
+                android:layout_height="@dimen/_20sdp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/share_icon" />
             <TextView

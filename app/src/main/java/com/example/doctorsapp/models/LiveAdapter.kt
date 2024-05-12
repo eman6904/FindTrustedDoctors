@@ -29,10 +29,7 @@ class LiveAdapter(private val list:ArrayList<LiveModel>):
          holder.liveIcon.setImageResource(item.liveIcon)
          holder.doctorPic.setImageResource(item.doctorPic)
          holder.playIcon.setImageResource(item.playIcon)
-//        holder.itemView.setOnClickListener {
-//            val bundle = bundleOf("index" to position, "text" to text)
-//            it.findNavController().navigate(R.id.action_mainMenu_to_subMenu, bundle)
-//        }
+
     }
     override fun getItemCount(): Int {
         return list.size

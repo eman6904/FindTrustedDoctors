@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/drawable-anydpi/back_icon.xml" value="0.147" />
+        <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/drawable-anydpi/done_icon.xml" value="0.147" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.24" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/drawable/buttom_custom_shape.xml" value="0.239" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/drawable/circle_shape.xml" value="0.1" />
@@ -14,6 +16,7 @@
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/drawable/searchview_background.xml" value="0.1" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/activity_appointment.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/activity_appointment_part2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/activity_doctor_details.xml" value="0.10894941634241245" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/activity_doctor_sign_up.xml" value="0.16" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/activity_face.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/activity_find_doctors.xml" value="0.264" />
@@ -23,11 +26,13 @@
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/activity_register_as.xml" value="0.16" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/activity_sign_in.xml" value="0.176" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/awareness_model.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/dialog.xml" value="0.1" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/doctor_model.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/live_model.xml" value="0.1" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/popular_doctor_model.xml" value="0.2" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/post_model.xml" value="0.2" />
         <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/text_model.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/CS/AndroidStudioProjects/DoctorsApp/app/src/main/res/layout/textmodel2.xml" value="0.2" />
       </map>
     </option>
   </component>

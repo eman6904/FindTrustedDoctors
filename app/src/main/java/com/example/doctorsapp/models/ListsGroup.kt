@@ -17,10 +17,10 @@ class ListsGroup {
     }
     fun setAwareness(){
         awareness.add(AwarenessModel(R.drawable.teeth))
-        awareness.add(AwarenessModel(R.drawable.teeth))
-        awareness.add(AwarenessModel(R.drawable.teeth))
-        awareness.add(AwarenessModel(R.drawable.teeth))
-        awareness.add(AwarenessModel(R.drawable.teeth))
+        awareness.add(AwarenessModel(R.drawable.heart))
+        awareness.add(AwarenessModel(R.drawable.bones))
+        awareness.add(AwarenessModel(R.drawable.eye))
+        awareness.add(AwarenessModel(R.drawable.fitness))
         awareness.add(AwarenessModel(R.drawable.teeth))
         awareness.add(AwarenessModel(R.drawable.teeth))
         awareness.add(AwarenessModel(R.drawable.teeth))
@@ -35,25 +35,37 @@ class ListsGroup {
     }
     fun setDoctorDetails(){
 
-        val arr1=ArrayList<AppointmentDetails>()
-        arr1.add(AppointmentDetails("02:00\nPM",true))
-        arr1.add(AppointmentDetails("03:00\nPM",true))
-        arr1.add(AppointmentDetails("04:00\nPM",true))
-        arr1.add(AppointmentDetails("09:30\nAM",true))
-        arr1.add(AppointmentDetails("010:30\nAM",true))
-        arr1.add(AppointmentDetails("11:00\nAM",true))
-        val arr2=ArrayList<AppointmentDetails>()
-        arr2.add(AppointmentDetails("30\nMns",true))
-        arr2.add(AppointmentDetails("60\nMns",true))
-        arr2.add(AppointmentDetails("120\nMns",true))
-        arr2.add(AppointmentDetails("360\nMns",true))
-        arr2.add(AppointmentDetails("40\nMns",true))
-        arr2.add(AppointmentDetails("90\nMns",true))
-        doctorsDetails.add(DoctorModel(R.drawable.dd1,4,"Dr.Amira Ali", "dentist","7 Years experience","follow",arr1,arr2))
-        doctorsDetails.add(DoctorModel(R.drawable.dp1,3,"Dr.Ali Samir", "Cardiologist","5 Years experience","follow",arr1,arr2))
-        doctorsDetails.add(DoctorModel(R.drawable.dp2,2,"Dr.Sona Salem", "Otolaryngology ","2 Years experience","follow",arr1,arr2))
-        doctorsDetails.add(DoctorModel(R.drawable.dd1,3,"Dr.Amira Ali", "dentist","4 Years experience","follow",arr1,arr2))
-        doctorsDetails.add(DoctorModel(R.drawable.dd1,4,"Dr.Amira Ali", "dentist","3 Years experience","follow",arr1,arr2))
-        doctorsDetails.add(DoctorModel(R.drawable.dd1,3,"Dr.Amira Ali", "dentist","3 Years experience","follow",arr1,arr2))
+        val avaliableTimeList=ArrayList<AppointmentDetails>()
+        avaliableTimeList.add(AppointmentDetails("02:00\nPM",true))
+        avaliableTimeList.add(AppointmentDetails("03:00\nPM",true))
+        avaliableTimeList.add(AppointmentDetails("04:00\nPM",true))
+        avaliableTimeList.add(AppointmentDetails("09:30\nAM",true))
+        avaliableTimeList.add(AppointmentDetails("010:30\nAM",true))
+        avaliableTimeList.add(AppointmentDetails("11:00\nAM",true))
+        val beforeRememberList=ArrayList<AppointmentDetails>()
+        beforeRememberList.add(AppointmentDetails("30\nMns",true))
+        beforeRememberList.add(AppointmentDetails("60\nMns",true))
+        beforeRememberList.add(AppointmentDetails("120\nMns",true))
+        beforeRememberList.add(AppointmentDetails("360\nMns",true))
+        beforeRememberList.add(AppointmentDetails("40\nMns",true))
+        beforeRememberList.add(AppointmentDetails("90\nMns",true))
+        val servicesList=ArrayList<String>()
+        servicesList.add("Patient care should be the first priority")
+        servicesList.add("You can contact us at any time at the following number 01123456780")
+        servicesList.add("patients can schedule follow-up appointments or \"recheck\" appointments with doctors\nto evaluate their response to treatment and monitor their health status")
+        servicesList.add("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
+        servicesList.add("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
+        doctorsDetails.add(DoctorModel(R.drawable.dd1,4,"Dr.Amira Ali", "dentist","7 Years experience","follow"
+            ,avaliableTimeList,beforeRememberList,servicesList,150))
+        doctorsDetails.add(DoctorModel(R.drawable.dp1,3,"Dr.Ali Samir", "Cardiologist","5 Years experience","follow"
+            ,avaliableTimeList,beforeRememberList,servicesList,200))
+        doctorsDetails.add(DoctorModel(R.drawable.dp2,2,"Dr.Sona Salem", "Otolaryngology ","2 Years experience","follow"
+            ,avaliableTimeList,beforeRememberList,servicesList,150))
+        doctorsDetails.add(DoctorModel(R.drawable.dd1,3,"Dr.Amira Ali", "dentist","4 Years experience","follow",
+            avaliableTimeList,beforeRememberList,servicesList,100))
+        doctorsDetails.add(DoctorModel(R.drawable.dd1,4,"Dr.Amira Ali", "dentist","3 Years experience","follow"
+            ,avaliableTimeList,beforeRememberList,servicesList,150))
+        doctorsDetails.add(DoctorModel(R.drawable.dd1,3,"Dr.Amira Ali", "dentist","3 Years experience","follow"
+            ,avaliableTimeList,beforeRememberList,servicesList,150))
     }
 }

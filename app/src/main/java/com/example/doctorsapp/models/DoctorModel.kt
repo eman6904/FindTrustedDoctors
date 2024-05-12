@@ -8,5 +8,7 @@ data class DoctorModel(
     val doctorExperience:String,
     var doctor_following:String,
     var availableTimeList:ArrayList<AppointmentDetails>,
-    var beforeRememberList:ArrayList<AppointmentDetails>
+    var beforeRememberList:ArrayList<AppointmentDetails>,
+    var services:ArrayList<String>,
+    var price:Int
     )

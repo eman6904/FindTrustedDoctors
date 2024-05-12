@@ -1,5 +1,7 @@
 package com.example.doctorsapp.models
 
+import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -8,10 +10,13 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
+import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.doctorsapp.R
+import com.example.doctorsapp.activities.DoctorDetailsActivity
 
-class DoctorAdapter (private val list:ArrayList<DoctorModel>):
+class DoctorAdapter (val context:Context,private val list:ArrayList<DoctorModel>):
     RecyclerView.Adapter<DoctorAdapter.ViewHolder>() {
     inner class ViewHolder(val view: View) :
         RecyclerView.ViewHolder(view) {
@@ -50,6 +55,12 @@ class DoctorAdapter (private val list:ArrayList<DoctorModel>):
             }
         }
         holder.ratingBar.rating= item.ratingBar.toFloat()
+        holder.more_details.setOnClickListener(){
+            val intent = Intent(context, DoctorDetailsActivity::class.java).apply {
+                putExtra("position", position)
+            }
+            context.startActivity(intent)
+        }
 
     }
     override fun getItemCount(): Int {

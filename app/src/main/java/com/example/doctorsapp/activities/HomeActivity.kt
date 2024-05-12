@@ -1,5 +1,6 @@
 package com.example.doctorsapp.activities
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,6 +23,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val title=findViewById<TextView>(R.id.title)
+
         //val search_view=findViewById<SearchView>(R.id.searchView)
         val recycler1=findViewById<RecyclerView>(R.id.recycler1)
         val recycler2=findViewById<RecyclerView>(R.id.recycler2)
@@ -54,5 +56,10 @@ class HomeActivity : AppCompatActivity() {
         val adapter3 = PostAdapter(listsGroup.doctorsPosts)
         recycler3.layoutManager = LinearLayoutManager(this)
         recycler3.adapter = adapter3
+        ///////////////////////////////////////////////////////////////////////
+        title.setOnClickListener(){
+            val intent=Intent(this,FindDoctorsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

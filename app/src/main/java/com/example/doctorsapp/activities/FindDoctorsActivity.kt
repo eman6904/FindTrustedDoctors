@@ -30,7 +30,7 @@ class FindDoctorsActivity : AppCompatActivity() {
         val recycler=findViewById<RecyclerView>(R.id.recycler)
         val listsGroup= ListsGroup()
         listsGroup.setDoctorDetails()
-        val adapter = DoctorAdapter(listsGroup.doctorsDetails)
+        val adapter = DoctorAdapter(this,listsGroup.doctorsDetails)
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = adapter
        /////////////////////////////////////////////////////////////////

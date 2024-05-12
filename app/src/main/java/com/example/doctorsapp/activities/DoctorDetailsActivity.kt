@@ -5,18 +5,18 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.RatingBar
-import android.widget.TextView
+import android.widget.*
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.doctorsapp.R
+import com.example.doctorsapp.models.AppointmentAdapter
 import com.example.doctorsapp.models.ListsGroup
+import com.example.doctorsapp.models.ServicesAdapter
 
-class AppointmentActivity : AppCompatActivity() {
+class DoctorDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_appointment)
+        setContentView(R.layout.activity_doctor_details)
 
         // to hide action bar
         if (getSupportActionBar() != null) {
@@ -29,7 +29,7 @@ class AppointmentActivity : AppCompatActivity() {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
             window.statusBarColor = this.resources.getColor(R.color.light_blue)
         }
-        /////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////
 
         val profile_image=findViewById<ImageView>(R.id.profile_image)
         val ratingBar=findViewById<RatingBar>(R.id.ratingbar)
@@ -37,22 +37,20 @@ class AppointmentActivity : AppCompatActivity() {
         val doctor_specialist=findViewById<TextView>(R.id.doctor_specialist)
         val doctor_experience=findViewById<TextView>(R.id.doctor_experience)
         val follow=findViewById<TextView>(R.id.follow)
+        val book_btn=findViewById<Button>(R.id.book_btn)
+        val recycler=findViewById<RecyclerView>(R.id.recycler)
         val back=findViewById<ImageView>(R.id.back)
-        val price=findViewById<TextView>(R.id.price)
 
         val listsGroup= ListsGroup()
         listsGroup.setDoctorDetails()
         val position = intent.getIntExtra("position",0)
-        val followingCase = intent.getStringExtra("folowingCase")
         val item=listsGroup.doctorsDetails[position]
 
-        item.doctor_following=followingCase!!
         doctor_name.text=item.doctorName
         doctor_experience.text=item.doctorExperience
         doctor_specialist.text=item.doctorSpecialist
         profile_image.setImageResource(item.profile_image)
         follow.text=item.doctor_following
-        price.text="$ ${item.price}.00 / hr"
         ratingBar.rating= item.ratingBar.toFloat()
 
         follow.setOnClickListener(){
@@ -67,18 +65,22 @@ class AppointmentActivity : AppCompatActivity() {
             }
         }
 
-        val next_btn=findViewById<Button>(R.id.next_btn)
-        next_btn.setOnClickListener(){
+        val adapter = ServicesAdapter(item.services)
+        recycler.layoutManager = LinearLayoutManager(this)
+        recycler.adapter = adapter
 
-            val intent= Intent(this,AppointmentPart2Activity::class.java).apply {
+        book_btn.setOnClickListener(){
 
+            val intent=Intent(this,AppointmentActivity::class.java).apply {
                 putExtra("position", position)
+                putExtra("folowingCase", item.doctor_following)
             }
             startActivity(intent)
         }
-        /////////////////////////////////////////////////////////////////////////////
         back.setOnClickListener(){
+
             finish()
         }
+    ///////////////////////////////////////////////////////////////////////
     }
 }
