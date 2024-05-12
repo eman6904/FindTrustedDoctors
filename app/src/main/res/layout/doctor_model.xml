@@ -37,7 +37,7 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="4"
+                    android:layout_weight="3"
                     android:weightSum="5"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -65,7 +65,7 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/_5sdp"
                             style="?android:attr/ratingBarStyleSmall"
-                            android:numStars="5"
+                            android:numStars="6"
                             android:stepSize="0.1"
                             android:isIndicator="true" />
                     </LinearLayout>
@@ -73,7 +73,7 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="4.5"
+                    android:layout_weight="4"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/doctor_name"
@@ -89,14 +89,14 @@
                         android:id="@+id/doctor_specialist"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_8sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:padding="@dimen/_2sdp"
                         android:text="Dentist Specialist" />
                     <TextView
                         android:id="@+id/doctor_experience"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/_8sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:padding="@dimen/_2sdp"
                         android:text="7 Years experience" />
 
@@ -112,13 +112,19 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="2"
                     >
-                    <ImageView
-                        android:id="@+id/fav_icon"
+                    <TextView
+                        android:id="@+id/follow"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/fav_icon" />
+                        android:textSize="@dimen/_10sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:gravity="center_horizontal"
+                        android:textColor="#0277BD"
+                        android:text="follow"
+                         />
                 </LinearLayout>
             </LinearLayout>
 

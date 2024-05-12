@@ -6,5 +6,7 @@ data class DoctorModel(
     val doctorName:String,
     val doctorSpecialist:String,
     val doctorExperience:String,
-    val moreDetails:String
+    var doctor_following:String,
+    var availableTimeList:ArrayList<AppointmentDetails>,
+    var beforeRememberList:ArrayList<AppointmentDetails>
     )

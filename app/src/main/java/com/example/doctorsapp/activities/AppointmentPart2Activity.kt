@@ -4,28 +4,15 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import android.widget.ImageView
-import android.widget.SearchView
-import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.doctorsapp.R
-import com.example.doctorsapp.models.AwarenessAdapter
-import com.example.doctorsapp.models.ListsGroup
-import com.example.doctorsapp.models.LiveAdapter
-import com.example.doctorsapp.models.PostAdapter
+import com.example.doctorsapp.models.*
 
-class HomeActivity : AppCompatActivity() {
+class AppointmentPart2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-
-        val title=findViewById<TextView>(R.id.title)
-        //val search_view=findViewById<SearchView>(R.id.searchView)
-        val recycler1=findViewById<RecyclerView>(R.id.recycler1)
-        val recycler2=findViewById<RecyclerView>(R.id.recycler2)
-        val recycler3=findViewById<RecyclerView>(R.id.recycler3)
+        setContentView(R.layout.activity_appointment_part2)
 
         // to hide action bar
         if (getSupportActionBar() != null) {
@@ -39,20 +26,18 @@ class HomeActivity : AppCompatActivity() {
             window.statusBarColor = this.resources.getColor(R.color.light_blue)
         }
         //////////////////////////////////////////////////////////////////////////
+        val recycler1=findViewById<RecyclerView>(R.id.recycler1)
+        val recycler2=findViewById<RecyclerView>(R.id.recycler2)
+
         val listsGroup=ListsGroup()
-        listsGroup.setDoctorsLive()
-        val adapter = LiveAdapter(listsGroup.doctorsLive)
+        listsGroup.setDoctorDetails()
+
+        val adapter = AppointmentAdapter(listsGroup.doctorsDetails[0].availableTimeList)
         recycler1.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false)
         recycler1.adapter = adapter
         //////////////////////////////////////////////////////////////////////////
-        listsGroup.setAwareness()
-        val adapter2 = AwarenessAdapter(listsGroup.awareness)
+        val adapter2 = AppointmentAdapter(listsGroup.doctorsDetails[0].beforeRememberList)
         recycler2.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false)
         recycler2.adapter = adapter2
-        /////////////////////////////////////////////////////////////////////////
-        listsGroup.setPosts()
-        val adapter3 = PostAdapter(listsGroup.doctorsPosts)
-        recycler3.layoutManager = LinearLayoutManager(this)
-        recycler3.adapter = adapter3
     }
 }

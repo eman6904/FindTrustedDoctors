@@ -41,4 +41,14 @@
         <item name="android:background">@drawable/searchview_background</item>
         <item name="android:textColorHint">@color/black</item>
     </style>
+    <style name="CustomDatePickerStyle" parent="@android:style/Widget.DatePicker">
+        <!-- Change color of the calendar -->
+        <item name="android:calendarTextColor">#1565C0</item>
+        <!-- Change color of the selected date -->
+        <item name="android:datePickerMode">calendar</item>
+        <item name="android:headerBackground">#1565C0</item>
+        <!-- Change color of the header -->
+        <!-- Change color of the days -->
+    </style>
+
 </resources>
